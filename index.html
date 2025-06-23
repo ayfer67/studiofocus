@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <title>@studiofocus.pt</title> 
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>Studio Focus</title>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div id="perfil">
+            <a href="logo.png">
+                <img src="logo.png" alt="perfil" id="perfil-image">
+                <p id="name">Studio Focus</p>
+                <a>Produtora de Conteúdo Digital</a>
+            </a>
+        </div>
+    </header>
+<section class="botoes-links">
+            <a href="https://www.instagram.com/studiofocus.pt" target="_blank" class="link">
+                <button class="degrade">
+                    <span>Instagram</span>
+                    <i class="bi bi-instagram"></i>
+                </button>
+            </a>
+
+            <a href="https://wa.me/+351933144699?text=Olá%2C%20gostaria%20de%20um%20orçamento." target="_blank" class="link" rel="noopener">
+                <button class="degrade">
+                    <span>Solicitar um Orçamento.</span>
+                    <i class="bi bi-chat-text-fill"></i>
+                </button >
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=suportestudiofocus@gmail.com" target="_blank" class="link">
+                <button class="degrade">
+                    <span>Envie um Email.</span>
+                    <i class="bi bi-envelope-at"></i>
+                </button>
+            </a>
+            </section>
+
+     <!--=============== PORTIFÓLIO ===============-->
+</section>
+<head>
+  <title>PORTIFÓLIO</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="carousel-container">
+    <h1 id="name">Conheça nosso Trabalhos:</h1>
+    <div class="carousel" id="carousel">
+      <img src="img1.jpg" alt="1">
+      <img src="img2.jpg" alt="2">
+      <img src="img3.jpg" alt="3">
+      <img src="img4.jpg" alt="4">
+      <img src="img5.jpg" alt="5">
+      <img src="img6.jpg" alt="6">
+      <img src="img7.jpg" alt="7">
+      <img src="img8.jpg" alt="8">
+      <img src="img9.jpg" alt="9">
+      <img src="img10.jpg" alt="10">
+    </div>
+    <div class="controls">
+      <button onclick="rotateCarousel(-1)">&#10094;</button>
+      <button onclick="rotateCarousel(1)">&#10095;</button>
+    </div>
+  </div>
+</section>
+  <script src="script.js"></script>
+</body>
+
+ <!--=============== COMENTARIOS "CLIENTES" ===============-->
+    <style>
+        .testimonial-container {
+            max-width: 600px;
+            margin: auto;
+            position: relative;
+        }
+        .testimonial {
+            display: none;
+            background: #ffd13b;
+            color: hsl(0, 0%, 0%);
+            padding: 20px;
+            border-radius: 30px;
+            box-shadow: 0px 0px 10px hsla(46, 100%, 50%, 0.349);
+            font-style: italic;
+        }
+        .testimonial.active {
+            display: block;
+        }
+        .navigation {
+            margin-top: 15px;
+        }
+        .navigation button {
+            background: #ffffff;
+            border: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <style>
+        .container h1 {
+            color: hsl(0, 0%, 100%);
+        }
+    </style>
+    <h1>Depoimentos de Clientes!</h1>
+    <div class="testimonial-container">
+        <div class="testimonial active">
+            <i class="bi bi-person-bounding-box"></i> <h3>Maria Silva</h3>
+            <p>"Ótimo atendimento e qualidade excepcional!"</p>
+        </div>
+        <div class="testimonial">
+            <i class="bi bi-person-bounding-box"></i> <h3>João Pereira</h3>
+            <p>"Profissionais incríveis e resultado impecável."</p>
+        </div>
+        <div class="testimonial">
+            <i class="bi bi-person-bounding-box"></i> <h3>Ana Costa</h3>
+            <p>"Super recomendo o Studio Focus!"</p>
+        </div>
+        <div class="testimonial">
+            <i class="bi bi-person-bounding-box"></i> <h3>Carlos Henrique</h3>
+            <p>"Trabalho de qualidade e entrega no prazo. Estou super satisfeito!"</p>
+        </div>
+        <div class="testimonial">
+            <i class="bi bi-person-bounding-box"></i> <h3>Mafalda</h3>
+            <p>"Fiquei impressionada com o resultado final. Superou minhas expectativas!"</p>
+        </div>
+    </div>
+
+    <script>
+        let current = 0;
+        const testimonials = document.querySelectorAll('.testimonial');
+
+        function showTestimonial(index) {
+            testimonials.forEach((t, i) => {
+                t.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextTestimonial() {
+            current = (current + 1) % testimonials.length;
+            showTestimonial(current);
+        }
+
+        function prevTestimonial() {
+            current = (current - 1 + testimonials.length) % testimonials.length;
+            showTestimonial(current);
+        }
+
+        // Mostrar o primeiro
+        showTestimonial(current);
+
+        // Troca automática a cada 5 segundos
+        setInterval(nextTestimonial, 5000);
+    </script>
+</body>
+
+<section       id="Serviços">
+               <h2>Nossos Serviços!</h2>
+               <p>Fotografia & Vídeo Corporativo, Eventos, Palestras, Produtos, Ensaios Externos, Food, Casamentos, Gestante, Designer Gráfico, Filmmaker & Entre Outros.</p>
+</section>
+
+</div>
+<div class="Métodos de Pagamentos"></div>
+<section       id="Métodos de Pagamentos">
+               <img src="a.png" alt="10">
+               </div>
+</section>
+
+
+</body>
+</html>
